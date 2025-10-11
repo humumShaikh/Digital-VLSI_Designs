@@ -1,0 +1,26 @@
+module clk_gen #(parameter inbuiltClk = 50_000_000 , parameter desiredFrequency = 100)(
+    input wire bClk,
+    output reg outFreq
+    );
+    
+    reg [($clog2(inbuiltClk/2))-1:0]maxCount = inbuiltClk/(2*desiredFrequency);
+    reg [($clog2(inbuiltClk/2))-1:0]count;
+    
+    initial begin
+        outFreq <= 0;
+        count <= 0;
+    end
+    
+    always @(posedge bClk) begin
+        if(count==maxCount)
+            begin
+                outFreq <= ~outFreq;
+                count <= 0;
+            end
+        else
+            begin
+                count <= count+1;
+            end
+    end
+    
+endmodule
