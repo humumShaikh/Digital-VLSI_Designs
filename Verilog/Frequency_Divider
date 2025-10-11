@@ -1,4 +1,4 @@
-////    Frequency Divider    ////
+////    **Frequency Divider**    ////
 //Synthesizable Design made for taking an FPGA board's inbuilt clock and reduce it down to get the desired clock frequency//
 //Just change the value of parameter 'inbuiltClk' to the default clock frequency provided by your FPGA development board//
 //and change the value of parameter 'desiredFrequency' to the frequency you want at the output//
