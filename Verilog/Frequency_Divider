@@ -5,7 +5,9 @@
 //The formula that I have come up with if you are curious//
 //maxCount = inbuiltClk/(2*outFrequency) //this will get the value that the counter must count upto before it negates the output wire working as clock//
 //$clog2(inbuiltClk/2)-1 gives the MSB of the reg that is required to hold the maxCount value//
+//Won't work if the inbuilt clock frequency and the desired output frequency are both same//
 //Note: this design should work for almost every board but it was tested for Spartan-7//
+
 
 module clk_gen #(parameter inbuiltClk = 100_000_000 , parameter desiredFrequency = 100)(
     input wire bClk,
