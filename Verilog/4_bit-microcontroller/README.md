@@ -12,4 +12,6 @@
 
 
 **ALU OPERATION CODES**
-<img width="159" height="354" alt="image" src="https://github.com/user-attachments/assets/47401b6b-2c82-482c-9520-0887e3e836ad" />
+
+<img width="792" height="449" alt="image" src="https://github.com/user-attachments/assets/04d65325-5003-4082-8666-993d23e280f4" />
+
