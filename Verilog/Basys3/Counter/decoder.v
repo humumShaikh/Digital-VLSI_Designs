@@ -1,15 +1,15 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+// Company: CWIR3
+// Engineer: copperwire
 // 
 // Create Date: 16.10.2025 10:39:04
 // Design Name: 
 // Module Name: decoder
 // Project Name: 
-// Target Devices: 
+// Target Devices: Basys3    (xc7a35tcpg236-1)
 // Tool Versions: 
-// Description: 
+// Description: Converts the received bcd digits into 7-segment compatible code
 // 
 // Dependencies: 
 // BOARD:   xc7a35tcpg236
