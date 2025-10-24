@@ -1,15 +1,15 @@
 `timescale 1s / 1s
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+// Company: CWIR3
+// Engineer: copperwire
 // 
 // Create Date: 16.10.2025 09:37:14
 // Design Name: 
 // Module Name: counter
 // Project Name: 
-// Target Devices: 
+// Target Devices: Basys3    (xc7a35tcpg236-1)
 // Tool Versions: 
-// Description: 
+// Description: Counts seconds from 0 to 59
 // 
 // Dependencies: 
 // 
