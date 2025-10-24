@@ -7,7 +7,7 @@
 // Design Name: 
 // Module Name: BCD
 // Project Name: 
-// Target Devices: 
+// Target Devices: Basys3    (xc7a35tcpg236-1)
 // Tool Versions: 
 // Description: Converts two digit decimal value into its BCD equivalent form as MSB and LSB (or Ten's and Unit's digits)
 // 
