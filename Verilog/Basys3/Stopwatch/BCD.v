@@ -27,7 +27,6 @@ module BCD(
     );
     //1024
     reg [13:0] temp = 0;
-    reg [3:0] rem = 0;
     reg [3:0] count = 0;
     
     initial
