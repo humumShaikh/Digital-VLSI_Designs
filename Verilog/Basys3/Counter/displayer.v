@@ -1,15 +1,15 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+// Company: CWIR3
+// Engineer: copperwire
 // 
 // Create Date: 16.10.2025 09:37:14
 // Design Name: 
 // Module Name: counter
 // Project Name: 
-// Target Devices: 
+// Target Devices: Basys3    (xc7a35tcpg236-1)
 // Tool Versions: 
-// Description: 
+// Description: Multiplexes the signals intended for two digit 7-segment displays
 // 
 // Dependencies: 
 // 
