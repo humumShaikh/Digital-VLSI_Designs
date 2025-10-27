@@ -1,7 +1,7 @@
 `timescale 1s / 1s
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+// Company: CWIR3
+// Engineer: copperwire
 // 
 // Create Date: 16.10.2025 09:37:14
 // Design Name: 
