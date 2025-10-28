@@ -9,7 +9,7 @@
 // Project Name: 
 // Target Devices: Basys3   (xc7a35tcpg236-1)
 // Tool Versions: 
-// Description: To display an image on a display using VGA
+// Description: To display an image on a display using VGA      NOTE : this one has a sample image of 128x64 pixels
 // 
 // Dependencies: 
 // 
