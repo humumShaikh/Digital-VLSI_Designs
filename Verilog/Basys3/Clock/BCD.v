@@ -1,3 +1,23 @@
+//////////////////////////////////////////////////////////////////////////////////
+// Company: CWIR3
+// Engineer: copperwire
+// 
+// Create Date: 28.10.2025 19:40:18
+// Design Name: 
+// Module Name: vga_controller
+// Project Name: 
+// Target Devices: Basys3   (xc7a35tcpg236-1)
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
 module BCD(
     input wire [5:0]sec,
     input wire [5:0]min,
