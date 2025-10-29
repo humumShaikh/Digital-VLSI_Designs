@@ -1,3 +1,24 @@
+//////////////////////////////////////////////////////////////////////////////////
+// Company: CWIR3
+// Engineer: copperwire
+// 
+// Create Date: 28.10.2025 19:40:18
+// Design Name: 
+// Module Name: vga_controller
+// Project Name: 
+// Target Devices: Basys3   (xc7a35tcpg236-1)
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+
 module decoder(
     input wire [3:0]thd,hd,td,ud,
     output reg [7:0]THOUSANDS_DIGIT,HUNDREDS_DIGIT,TENS_DIGIT,UNITS_DIGIT
