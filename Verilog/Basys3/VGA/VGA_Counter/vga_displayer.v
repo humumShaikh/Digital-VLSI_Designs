@@ -22,6 +22,7 @@
 
 module vga_displayer(
     input wire clk,
+    input wire clk25,
     input wire [3:0] td,
     input wire [3:0] ud,
     input wire [9:0] hcount,
@@ -32,7 +33,7 @@ module vga_displayer(
     `include "digitImages.vh"
     
     
-    reg [13:0] max_count = 5_000;
+    reg [13:0] max_count = 16_631;
     reg [13:0] count = 0;
     reg [1:0] digit = 0;
     
@@ -42,18 +43,18 @@ module vga_displayer(
         begin
             count <= 0;
             if((hcount <= 49) && (vcount <= 49)) digit <= 2;
-            else if((hcount >= 50) && (vcount <= 99)) digit <= 1;
+            else if((hcount >= 100   && hcount <= 149) && (vcount <= 49)) digit <= 1;
             else digit <= 0;
         end
         else count <= count + 1;
     end
   
   
-  always @(*)
+  always @(posedge clk25)
   begin
         if(digit == 2) decode(td,1);
         else if(digit == 1) decode(ud,0);
-        else rgb <= 12'b0000_0000_0000;
+        else if(digit == 0)rgb <= 12'b0000_0000_0000;
   end
   
   task decode;
@@ -111,43 +112,43 @@ module vga_displayer(
     begin
     case (d)
         0   :   begin
-                if(d0[vcount][hcount-50] == 1) rgb = 12'b1111_1111_1111;
+                if(d0[vcount][hcount-100] == 1) rgb = 12'b1111_1111_1111;
                 else rgb = 0;
                 end
         1   :   begin
-                if(d1[vcount][hcount-50] == 1) rgb = 12'b1111_1111_1111;
+                if(d1[vcount][hcount-100] == 1) rgb = 12'b1111_1111_1111;
                 else rgb = 0;
                 end  
         2   :   begin
-                if(d2[vcount][hcount-50] == 1) rgb = 12'b1111_1111_1111;
+                if(d2[vcount][hcount-100] == 1) rgb = 12'b1111_1111_1111;
                 else rgb = 0;
                 end
         3   :   begin
-                if(d3[vcount][hcount-50] == 1) rgb = 12'b1111_1111_1111;
+                if(d3[vcount][hcount-100] == 1) rgb = 12'b1111_1111_1111;
                 else rgb = 0;
                 end  
         4   :   begin
-                if(d4[vcount][hcount-50] == 1) rgb = 12'b1111_1111_1111;
+                if(d4[vcount][hcount-100] == 1) rgb = 12'b1111_1111_1111;
                 else rgb = 0;
                 end
         5   :   begin
-                if(d5[vcount][hcount-50] == 1) rgb = 12'b1111_1111_1111;
+                if(d5[vcount][hcount-100] == 1) rgb = 12'b1111_1111_1111;
                 else rgb = 0;
                 end  
         6   :   begin
-                if(d6[vcount][hcount-50] == 1) rgb = 12'b1111_1111_1111;
+                if(d6[vcount][hcount-100] == 1) rgb = 12'b1111_1111_1111;
                 else rgb = 0;
                 end
         7   :   begin
-                if(d7[vcount][hcount-50] == 1) rgb = 12'b1111_1111_1111;
+                if(d7[vcount][hcount-100] == 1) rgb = 12'b1111_1111_1111;
                 else rgb = 0;
                 end
         8   :   begin
-                if(d8[vcount][hcount-50] == 1) rgb = 12'b1111_1111_1111;
+                if(d8[vcount][hcount-100] == 1) rgb = 12'b1111_1111_1111;
                 else rgb = 0;
                 end
         9   :   begin
-                if(d9[vcount][hcount-50] == 1) rgb = 12'b1111_1111_1111;
+                if(d9[vcount][hcount-100] == 1) rgb = 12'b1111_1111_1111;
                 else rgb = 0;
                 end                               
     endcase
