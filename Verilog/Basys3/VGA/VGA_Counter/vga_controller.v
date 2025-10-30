@@ -23,15 +23,14 @@ module vga_controller(
     input wire clk,
     output reg hsync,
     output reg vsync,
-    output reg video_en,
+  //  output reg video_en,
     output reg [9:0] hcount,
-    output reg [9:0] vcount
+    output reg [9:0] vcount,
+    output reg pclk
     );
     
     reg [1:0] count = 0;
-    
-    reg pclk;
-        
+            
     always @(posedge clk)
     begin
         if(count == 0)
@@ -65,8 +64,8 @@ module vga_controller(
     always @(*)
     begin
     
-        if(hcount <= 639 && vcount <= 479) video_en <= 1;
-        else video_en <= 0;
+//        if(hcount <= 639 && vcount <= 479) video_en <= 1;
+//        else video_en <= 0;
     
         if((hcount >= 656) && (hcount <= 751)) hsync <= 1;
         else hsync <= 0;
