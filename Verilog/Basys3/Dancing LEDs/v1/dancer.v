@@ -1,15 +1,15 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+// Company: CWIR3
+// Engineer: copperwire
 // 
 // Create Date: 30.10.2025 09:18:03
 // Design Name: 
 // Module Name: dancer
 // Project Name: 
-// Target Devices: 
+// Target Devices: Basys3    (xc7a35tcpg236-1)
 // Tool Versions: 
-// Description: 
+// Description: Ring counter on the LEDs of the board
 // 
 // Dependencies: 
 // 
