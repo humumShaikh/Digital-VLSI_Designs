@@ -9,14 +9,10 @@
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
+// Description:  
 // Revision:
 // Revision 0.01 - File Created
 // Additional Comments:
-// 
 //////////////////////////////////////////////////////////////////////////////////
 
 
