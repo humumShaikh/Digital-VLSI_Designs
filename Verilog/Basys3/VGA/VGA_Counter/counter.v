@@ -4,19 +4,10 @@
 // Engineer: copperwire
 // 
 // Create Date: 16.10.2025 09:37:14
-// Design Name: 
 // Module Name: counter
-// Project Name: 
+// Project Name: VGA_Counter
 // Target Devices: Basys3    (xc7a35tcpg236-1)
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
+// Description: Count from 0 - 99
 //////////////////////////////////////////////////////////////////////////////////
 
 
