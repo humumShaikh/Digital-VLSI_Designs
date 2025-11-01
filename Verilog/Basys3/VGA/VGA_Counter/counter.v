@@ -7,7 +7,7 @@
 // Design Name: 
 // Module Name: counter
 // Project Name: 
-// Target Devices: 
+// Target Devices: Basys3    (xc7a35tcpg236-1)
 // Tool Versions: 
 // Description: 
 // 
