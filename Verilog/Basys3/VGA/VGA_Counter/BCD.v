@@ -8,9 +8,6 @@
 // Module Name: BCD
 // Project Name: 
 // Target Devices: Basys3    (xc7a35tcpg236-1)
-// Tool Versions: 
-// Description:  
-// Revision:
 // Revision 0.01 - File Created
 // Additional Comments:
 //////////////////////////////////////////////////////////////////////////////////
