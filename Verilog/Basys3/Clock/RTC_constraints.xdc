@@ -5,7 +5,8 @@
 
 ## Clock signal
 set_property -dict {PACKAGE_PIN W5 IOSTANDARD LVCMOS33} [get_ports bClk]
-create_clock -add -name sys_clk_pin -period 10.00 -waveform {0 5} [get_ports clk]  #not un-commenting this line will not create a clock in design even though the clock pin will be attatched
+create_clock -add -name sys_clk_pin -period 10.00 -waveform {0 5} [get_ports clk]  
+#not un-commenting this line will not create a clock in design even though the clock pin will be attatched
 #to the fpga internally and your design will work perfectly well, although it will give you a warning that 'user defined clocks exist'
 
 
@@ -161,3 +162,4 @@ set_property -dict {PACKAGE_PIN W4 IOSTANDARD LVCMOS33} [get_ports {an[3]}]
 #set_property IOSTANDARD LVCMOS33 [get_ports reset]
 
 #set_property PACKAGE_PIN U18 [get_ports reset]
+
