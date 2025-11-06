@@ -9,7 +9,7 @@
 // Project Name: 
 // Target Devices: Basys3 (xc7a35tcpg236-1)
 // Tool Versions: 
-// Description: 
+// Description: 8x16 Synchronous FIFO
 // 
 // Dependencies: 
 // 
