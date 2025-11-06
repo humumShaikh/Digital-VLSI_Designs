@@ -7,7 +7,7 @@
 // Design Name: 
 // Module Name: FIFO
 // Project Name: 
-// Target Devices: 
+// Target Devices: Basys3 (xc7a35tcpg236-1)
 // Tool Versions: 
 // Description: 
 // 
