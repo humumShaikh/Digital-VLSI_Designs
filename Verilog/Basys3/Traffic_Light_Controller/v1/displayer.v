@@ -1,13 +1,13 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+// Company: CWIR3
+// Engineer: copperwire
 // 
 // Create Date: 11.11.2025 08:33:38
 // Design Name: 
 // Module Name: displayer
 // Project Name: 
-// Target Devices: 
+// Target Devices: xc7a35tcpg236-1    (Basys3)
 // Tool Versions: 
 // Description: 
 // 
