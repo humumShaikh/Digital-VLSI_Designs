@@ -7,7 +7,7 @@
 // Design Name: 
 // Module Name: tlc
 // Project Name: 
-// Target Devices: 
+// Target Devices: xc7a35tcpg236-1  (Basys3)
 // Tool Versions: 
 // Description: 
 // 
