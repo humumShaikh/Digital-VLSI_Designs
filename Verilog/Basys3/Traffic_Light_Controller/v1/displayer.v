@@ -9,8 +9,8 @@
 // Project Name: 
 // Target Devices: xc7a35tcpg236-1    (Basys3)
 // Tool Versions: 
-// Description: 
-// 
+// Description: Takes the ten's digit and the unit's digit of the seconds from the previous module and then displays them one by one since the segment lines are common for all 4 digits
+// Change the max_count value to change the refresh rate
 // Dependencies: 
 // 
 // Revision:
