@@ -9,10 +9,10 @@
 // Project Name: 
 // Target Devices:  xc7a35tcpg236-1     (Basys3)
 // Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
+// Description: Takes 4 8 bit outputs as alpha , beta , gamma , delta - representing the four alphabetic symbols that can be displayed on the 4 digit 7-segment display
+// for e.g - StoP , SEE- , Go--    
+// The four alphabetic characters are registered constantly but the chars change as per the state received from the previous module,
+// apart from this, the msb and lsb of the seconds counted are also sent to the output
 // Revision:
 // Revision 0.01 - File Created
 // Additional Comments:
