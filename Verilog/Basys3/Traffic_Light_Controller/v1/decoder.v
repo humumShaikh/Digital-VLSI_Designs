@@ -9,7 +9,7 @@
 // Project Name: 
 // Target Devices: (xc7a35tcpg236-1)    Basys3
 // Tool Versions: 
-// Description: 
+// Description: Converts the seconds into ten's and unit's digit seperately and then decodes them individually so as to properly turn on the segments to display that symbol/number
 // 
 // Dependencies: 
 // 
