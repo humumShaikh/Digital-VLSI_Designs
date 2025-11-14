@@ -25,7 +25,8 @@ module clk_gen(
     output wire clk_out
     );
     
-    reg [26:0] max_count = 99_999_999;
+    //reg [26:0] max_count = 99_999_999;
+    parameter max_count = 99_999_999;
     reg [26:0] count = 0;
     reg clk = 0;
     
