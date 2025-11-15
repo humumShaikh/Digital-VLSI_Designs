@@ -31,15 +31,15 @@ module clk_gen(
     reg clk = 0;
     
     always @(posedge clk_in)
-    begin
+    begin //
         if(count == max_count)
-        begin
+        begin //-//
             clk <= ~clk;
             count <= 0;
-        end
+        end //-//
         
         else count <= count + 1;
-    end
+    end //
     
     assign clk_out = clk;
     
