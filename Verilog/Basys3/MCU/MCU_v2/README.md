@@ -1,1 +1,2 @@
+**Note - when you generate the bitstream and program the FPGA, it might look like nothing is happening at first, but the clock has been configured to work on 1Hz and hence the changes will be slow , wait for atleast 20-30 seconds. If you want , you may change the 'max_count' paramater value in the 'clk_gen' module to change the clock speed**
 <img width="1625" height="419" alt="image" src="https://github.com/user-attachments/assets/defd8510-7cd0-4bf9-859e-3ee42c6c929e" />
