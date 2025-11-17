@@ -7,9 +7,9 @@
 // Design Name: 
 // Module Name: PROGMEM
 // Project Name: 
-// Target Devices: 
+// Target Devices: xc7a35tcpg236-1    (Basys3)
 // Tool Versions: 
-// Description: 
+// Description: This is the program memory that is supposed to hold all the opcodes i.e. the program instructions for the control unit to read from
 // 
 // Dependencies: 
 // 
