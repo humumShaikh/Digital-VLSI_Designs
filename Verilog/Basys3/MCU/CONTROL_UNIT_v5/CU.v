@@ -49,7 +49,9 @@ module CU(
                     incCounter     = 11,
                     cmpJmpCounter  = 12,
                     setCmpData     = 13,
-                    JMP            = 14;
+                    JMP            = 14,
+                    getJmpAddress  = 15,
+                    jmpAddress     = 16; 
                     
 
     reg [7:0] programCounter = 0;
@@ -99,7 +101,11 @@ module CU(
                                             8'h17   :   begin
                                                             temp <= 0;
                                                             state <= cmpJmpCounter;
-                                                        end                                               
+                                                        end 
+                                                        
+//                                            8'h18   :   begin
+//                                                            state <= getJmpAddress;
+//                                                        end                                                            
                                                         
                                         endcase //-//-//-//-//
                                     end //-//-//-//
@@ -236,7 +242,20 @@ module CU(
                 JMP           :     begin
                                         programCounter <= read_data;
                                         state <= FETCH;
-                                    end                      
+                                    end
+                                    
+//                getJmpAddress :     begin
+//                                        write_enable <= 0;
+//                                        read_enable <= 1;
+//                                        read_address <= programCounter;
+//                                        state <= jmpAddress;
+//                                    end                     
+                                    
+//                jmpAddress    :     begin
+//                                        read_enable <= 0;
+//                                        programCounter <= read_data;
+//                                        state <= FETCH;
+//                                    end                                                   
             
             endcase //-//-//
             
