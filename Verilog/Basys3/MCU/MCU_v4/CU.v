@@ -1,13 +1,13 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+// Company: CWIR3
+// Engineer: copperwire
 // 
 // Create Date: 17.11.2025 21:49:41
 // Design Name: 
-// Module Name: CU
+// Module Name: CU (Control Unit)
 // Project Name: 
-// Target Devices: 
+// Target Devices: xc7a35tcpg236-1    (Basys3)
 // Tool Versions: 
 // Description: 
 // 
