@@ -34,7 +34,6 @@ module CU(
     output wire [4:0] FSM_STATE
     );
     
-    assign FSM_STATE = state;
     
     parameter [4:0] FETCH           =   0,
                     DECODE          =   1,
@@ -56,6 +55,8 @@ module CU(
                     END             =   17;
                     
     reg [4:0] state = FETCH;
+    
+    assign FSM_STATE = state;
     
     reg [7:0] programCounter = 0;
     reg [31:0] counter;
