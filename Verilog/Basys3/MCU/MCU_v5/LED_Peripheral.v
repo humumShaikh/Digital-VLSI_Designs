@@ -27,13 +27,16 @@ module LED_Peripheral(
     input wire write_enable,
     input wire [7:0] write_address,
     input wire [7:0] write_data,
-    output reg [15:0] led
+    output wire [15:0] led
     );
     
     reg [7:0] LED_control = 0;
     reg [7:0] LED_data_01 = 0;
     reg [7:0] LED_data_02 = 0;
     
+    wire [15:0] temp;
+    
+    assign temp = {LED_data_01 , LED_data_02};
     
     always @(posedge clock)
     begin //
@@ -53,10 +56,10 @@ module LED_Peripheral(
             3   :   LED_data_02 <= write_data;
             endcase
         end //-//
-        
-        assign led = (LED_control[0]) ? {LED_data_01 , LED_data_02} : 16'h0000;
-    
+                    
     end //
+    
+    assign led = (LED_control[0]) ? temp : 0;
     
     
 endmodule
