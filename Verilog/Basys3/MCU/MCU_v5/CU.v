@@ -43,12 +43,17 @@ module CU(
                     setLEDData02    =   4,
                     END             =   5,
                     JMP             =   6,
-                    buffer          =   7;
+                    buffer          =   7,
+                    setCounter      =   8,
+                    CJE             =   9;
     
     reg [4:0] state = FETCH;
     
     reg [7:0] PC = 0;
     reg jmpFlag = 0;
+    reg [31:0] counter;
+    reg [31:0] comparator;
+    reg [3:0] temp = 0;
     
     always @(posedge clk)
     begin //
@@ -107,6 +112,28 @@ module CU(
                                                             PC <= PC + 1;
                                                         end             
                                                         
+                                            8'h15   :   begin
+                                                            temp <= 0;
+                                                            state <= setCounter;
+                                                            read_enable <= 1;
+                                                            read_address <= PC;
+                                                            PC <= PC + 1;
+                                                        end                  
+                                                        
+                                            8'h16   :   begin
+                                                            counter <= counter + 1;
+                                                            state <= FETCH;
+                                                        end                   
+                                                        
+                                            8'h17   :   begin
+                                                            temp <= 0;
+                                                            state <= CJE;
+                                                            read_enable <= 1;
+                                                            read_address <= PC;
+                                                            PC <= PC + 1;
+                                                            write_enable <= 0;
+                                                        end                
+                                                        
                                             8'h18   :   begin
                                                             state <= JMP;
                                                             read_enable <= 1;
@@ -140,7 +167,78 @@ module CU(
                                         write_address <= 8'h03;
                                         write_data <= read_data;
                                         state <= FETCH;
-                                    end //-//-//-//          
+                                    end //-//-//-//
+                                    
+                setCounter      :   begin //-//-//-//
+                                        case (temp) //-//-//-//-//
+                                                   0    :   begin
+                                                                PC <= PC + 1;
+                                                                read_address <= PC;
+                                                                counter[31:24] <= read_data;
+                                                                temp <= 1;
+                                                            end
+                                                   1    :   begin
+                                                                read_address <= PC;
+                                                                PC <= PC + 1;
+                                                                counter[23:16] <= read_data;
+                                                                temp <= 2;
+                                                            end           
+                                                   2    :   begin
+                                                                read_address <= PC;
+                                                                PC <= PC + 1;
+                                                                counter[15:8] <= read_data;
+                                                                temp <= 3;
+                                                            end          
+                                                   3    :   begin
+                                                                counter[7:0] <= read_data;
+                                                                temp <= 0;
+                                                                state <= FETCH;
+                                                            end               
+                                        endcase //-//-//-//-//
+                                    end //-//-//-//         
+                                    
+                CJE             :   begin //-//-//-//
+                                        case (temp)
+                                            0   :   begin
+                                                        read_address <= PC;
+                                                        comparator[31:24] <= read_data;
+                                                        PC <= PC + 1;
+                                                        temp <= 1;
+                                                    end
+                                            1   :   begin
+                                                        read_address <= PC;
+                                                        comparator[23:16] <= read_data;
+                                                        PC <= PC + 1;
+                                                        temp <= 2;
+                                                    end           
+                                            2   :   begin
+                                                        read_address <= PC;
+                                                        comparator[15:8] <= read_data;
+                                                        PC <= PC + 1;
+                                                        temp <= 3;
+                                                    end         
+                                            3   :   begin
+                                                        read_enable <= 1;
+                                                        read_address <= PC;
+                                                        comparator[7:0] <= read_data;
+                                                        temp <= 4;
+                                                    end      
+                                            4   :   begin
+                                                        read_enable <= 0;
+                                                        if(counter == comparator)
+                                                        begin
+                                                            jmpFlag <= 1;     
+                                                            PC <= read_data;
+                                                            state <= FETCH;
+                                                        end
+                                                        else
+                                                        begin
+                                                            PC <= PC + 1;
+                                                            state <= FETCH;
+                                                        end
+                                                    end               
+                                        endcase
+                                    end //-//-//-//                                                
                                     
                 JMP             :   begin //-//-//-//
                                         read_enable <= 0;
@@ -148,7 +246,7 @@ module CU(
                                         state <= FETCH;
                                         jmpFlag <= 1;
                                     end //-//-//-//      
-                                    
+                                                                        
                 buffer          :   state <= FETCH;                                                                             
                                     
             
