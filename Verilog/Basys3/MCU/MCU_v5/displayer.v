@@ -65,7 +65,7 @@ module displayer(
                     segment <= o4;
                     dcount <= 0;     
                     end         
-                
+            
         endcase
     end
     
