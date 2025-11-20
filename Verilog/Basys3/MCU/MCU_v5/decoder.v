@@ -60,7 +60,7 @@ module decoder(
         endcase
         end
     endtask
-    
+
     /////0/////
     //       //
     //5      //1
