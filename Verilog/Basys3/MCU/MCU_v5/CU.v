@@ -73,7 +73,6 @@ module CU(
                                         write_enable <= 0;
                                         read_address <= PC;
                                         PC <= PC + 1;
-                                        write_enable <= 0;
                                         if(jmpFlag == 1)
                                         begin
                                             jmpFlag <= 0;
