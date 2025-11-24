@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+// Company: CWIR3
+// Engineer: copperwire
 // 
 // Create Date: 20.11.2025 09:59:46
 // Design Name: 
@@ -45,7 +45,10 @@ module CU(
                     JMP             =   6,
                     buffer          =   7,
                     setCounter      =   8,
-                    CJE             =   9;
+                    CJE             =   9,
+                    setSegCtrl     =   10,
+                    setSegMSB      =   11,
+                    setSegLSB      =   12;
     
     reg [4:0] state = FETCH;
     
@@ -139,6 +142,32 @@ module CU(
                                                             read_address <= PC;
                                                             write_enable <= 0;
                                                         end               
+                                                        
+                                            8'h19   :   state <= END;               
+                                            
+                                            8'h21   :   begin
+                                                            state <= setSegCtrl;
+                                                            read_enable <= 1;
+                                                            read_address <= PC;
+                                                            PC <= PC + 1;
+                                                            write_enable <= 0;
+                                                        end
+                                           
+                                            8'h22   :   begin
+                                                            state <= setSegMSB;
+                                                            read_enable <= 1;
+                                                            read_address <= PC;
+                                                            PC <= PC + 1;
+                                                            write_enable <= 0;
+                                                        end
+                                                        
+                                            8'h23   :   begin
+                                                            state <= setSegLSB;
+                                                            read_enable <= 1;
+                                                            read_address <= PC;
+                                                            PC <= PC + 1;
+                                                            write_enable <= 0;
+                                                        end                             
                                                         
                                             default :   state <= FETCH;                
                                         endcase //-//-//-//-//
@@ -245,6 +274,35 @@ module CU(
                                         state <= FETCH;
                                         jmpFlag <= 1;
                                     end //-//-//-//      
+                                    
+                setSegCtrl      :   begin //-//-//-//
+                                        read_enable <= 0;
+                                        read_address <= PC;
+                                        write_enable <= 1;
+                                        write_address <= 8'h04;
+                                        write_data <= read_data;
+                                        state <= FETCH;
+                                    end //-//-//-//        
+                                    
+                setSegMSB       :   begin //-//-//-//
+                                        read_enable <= 0;
+                                        read_address <= PC;
+                                        write_enable <= 1;
+                                        write_address <= 8'h05;
+                                        write_data <= read_data;
+                                        state <= FETCH;
+                                    end //-//-//-//   
+                                    
+                setSegLSB       :   begin //-//-//-//
+                                        read_enable <= 0;
+                                        read_address <= PC;
+                                        write_enable <= 1;
+                                        write_address <= 8'h06;
+                                        write_data <= read_data;
+                                        state <= FETCH;
+                                    end //-//-//-//                                                          
+                                    
+                END             :   state <= END;                       
                                                                         
                 buffer          :   state <= FETCH;                                                                             
                                     
