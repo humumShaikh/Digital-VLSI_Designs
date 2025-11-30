@@ -7,7 +7,7 @@
 // Design Name: 
 // Module Name: CU
 // Project Name: 
-// Target Devices: 
+// Target Devices: xc7a35tcpg236-1
 // Tool Versions: 
 // Description: 
 // 
