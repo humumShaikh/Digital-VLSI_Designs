@@ -1,4 +1,6 @@
+
 ///////////////Structure Pass By Reference///////////////
+`timescale 1ns / 1ps
 
 typedef struct{
         int age = 69;
