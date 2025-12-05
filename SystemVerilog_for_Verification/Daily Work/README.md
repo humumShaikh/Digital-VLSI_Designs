@@ -61,3 +61,24 @@ module helloWorld();
 endmodule
 
 ///////////////2D Structure///////////////
+
+
+///////////////String Functions///////////////
+
+module f2();
+
+    string name = "COPPERWIRE";
+    
+    initial begin
+        $display(name.len());
+        $display(name.tolower());
+        $display(name.toupper());
+        $display(name.getc(0)); //index
+        name.putc(0,"A"); //index , character
+        $display(name);
+        $display(name.atoi());
+    end
+
+endmodule
+
+///////////////String Functions///////////////
