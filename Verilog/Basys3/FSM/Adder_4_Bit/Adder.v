@@ -7,7 +7,7 @@
 // Design Name: 
 // Module Name: Adder
 // Project Name: 
-// Target Devices: xc7a35tcpg236-1
+// Target Devices: xc7a35tcpg236-1 (Basys3)
 // Tool Versions: 
 // Description: 
 // 
