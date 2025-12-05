@@ -8,10 +8,6 @@
 // Module Name: Adder
 // Project Name: 
 // Target Devices: xc7a35tcpg236-1 (Basys3)
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
 // 
 // Revision:
 // Revision 0.01 - File Created
