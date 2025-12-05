@@ -11,12 +11,6 @@
 // Tool Versions: 
 // Description: Ring counter on the LEDs of the board
 // 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
 //////////////////////////////////////////////////////////////////////////////////
 
 
