@@ -15,7 +15,7 @@
 // 
 // Revision:
 // Revision 0.01 - File Created
-// Additional Comments:
+// Additional Comments: Synthesize with the other modules provided as per the diagram to verify it on the FPGA
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
