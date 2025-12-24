@@ -32,39 +32,6 @@ module SPI_S
     reg dataBuffer = 0;
     reg [3:0] counter = 8;
     reg [7:0] slaveData = 8'h88; //
-   
-
-
-//    always @(posedge sclk)
-//    begin
-//        if(ss == 1'b0)
-//        begin
-//            miso <= slaveData[7];
-//            if(counter != 0)
-//            begin
-//                slaveData <= slaveData << 1;
-//            end
-//        end
-//    end
-    
-//    always @(negedge sclk)
-//    begin
-//        if(ss == 1'b0)
-//        begin
-//            slaveData[0] <= mosi;
-//            counter <= counter - 1;
-//        end
-        
-//        if(counter == 0)
-//        begin
-//            counter <= 8;
-//        end
-//    end
-    
-    
-    
-    
-    
     
     
     always @(posedge sclk)
