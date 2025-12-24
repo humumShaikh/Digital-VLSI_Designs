@@ -15,7 +15,7 @@
 // 
 // Revision:
 // Revision 0.01 - File Created
-// Additional Comments:
+// Additional Comments: SPI Mode 1 : CPOL = 0 CPHA = 1 , Tx +posedge Rx -negedge
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
