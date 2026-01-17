@@ -38,7 +38,7 @@ module struct_mem(
     begin
         if(write)
         begin
-            RAM.MEM[address] <= write_data;
+            RAM.MEM[address] <= write_data;            //accessing the structure attribute and assigning to it
         end
         
         else if(read)
