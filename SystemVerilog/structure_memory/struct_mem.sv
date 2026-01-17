@@ -32,7 +32,7 @@ module struct_mem(
     output logic [7:0] read_data
     );
     
-    memory RAM;
+    memory RAM;                   //instance of structure memory
     
     always_ff @(posedge clk)
     begin
