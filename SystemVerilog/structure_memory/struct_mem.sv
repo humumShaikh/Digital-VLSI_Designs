@@ -43,7 +43,7 @@ module struct_mem(
         
         else if(read)
         begin
-            read_data <= RAM.MEM[address];
+            read_data <= RAM.MEM[address];            //reading from the structure attribute
         end
     end
     
