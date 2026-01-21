@@ -1,3 +1,5 @@
+***CHECK OUT SPI_v2 (BEST SO FAR)***
+
 ***SPI COMMUNICATION -  MASTER AND SLAVE SIMULATION***
 
 <img width="1565" height="411" alt="image" src="https://github.com/user-attachments/assets/a4394957-d2f3-47b9-bc55-75e71186b710" />
