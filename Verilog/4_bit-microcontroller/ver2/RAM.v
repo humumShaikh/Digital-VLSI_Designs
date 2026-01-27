@@ -28,7 +28,7 @@ module RAM
         output reg [7:0]dataOut
     );
     
-    reg [7:0] MEMORY [0:7];
+    reg [7:0] MEMORY [0:7];            //unpacked memory containing 8 locations of 8 bit each
     
     always @(*)
     begin
