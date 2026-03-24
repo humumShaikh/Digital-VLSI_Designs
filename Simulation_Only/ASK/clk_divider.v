@@ -4,11 +4,10 @@
 // Engineer: copperwire
 // 
 // Create Date: 24.03.2026 15:38:21
-// Design Name: 
 // Module Name: clk_divider
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
+// Project Name: Amplitude Shift Keying (ASK) / On Off Keying (OOK)
+// Target Devices: xc7a35tcpg236-1 (Artix-7 Basys 3 Board)
+// Tool Versions: Vivado 2018.2
 // Description: 
 // 
 // Dependencies: None
