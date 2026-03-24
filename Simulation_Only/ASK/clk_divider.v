@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+// Company: CWIR3
+// Engineer: copperwire
 // 
 // Create Date: 24.03.2026 15:38:21
 // Design Name: 
@@ -11,11 +11,11 @@
 // Tool Versions: 
 // Description: 
 // 
-// Dependencies: 
+// Dependencies: None
 // 
 // Revision:
 // Revision 0.01 - File Created
-// Additional Comments:
+// Additional Comments: Basic Clock Divider module, max_count = inbuilt_frequency / (2 * desired_output_frequency)
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
