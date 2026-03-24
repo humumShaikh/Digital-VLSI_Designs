@@ -8,11 +8,8 @@
 // Project Name: Amplitude Shift Keying (ASK) / On Off Keying (OOK)
 // Target Devices: xc7a35tcpg236-1 (Artix-7 Basys 3 Board)
 // Tool Versions: Vivado 2018.2
-// Description: 
-// 
 // Dependencies: None
-// 
-// Revision:
+// Revision: 1.0
 // Revision 0.01 - File Created
 // Additional Comments: Basic Clock Divider module, max_count = inbuilt_frequency / (2 * desired_output_frequency)
 // 
