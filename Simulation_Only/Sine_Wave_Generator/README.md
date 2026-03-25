@@ -28,3 +28,8 @@ Create testbench and instantitate the wrapper
 Assign an input clock and an output wire to the wrapper's output
 Write testbench to simulate an input clock to the wrapper
 Here we are assuming an input clock freqeuncy of 100MHz
+Run the simulation
+
+Now in the simulation window :
+- Change the output signal's 'waveform style' to 'analog'
+- Change the output signal's 'radix' to 'signed decimal'
