@@ -33,3 +33,8 @@ Run the simulation
 Now in the simulation window :
 - Change the output signal's 'waveform style' to 'analog'
 - Change the output signal's 'radix' to 'signed decimal'
+
+
+***The Simulation Result***
+<img width="1106" height="322" alt="image" src="https://github.com/user-attachments/assets/aff1c17d-4f57-475b-b826-93853244521b" />
+
