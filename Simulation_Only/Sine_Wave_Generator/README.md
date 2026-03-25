@@ -11,3 +11,12 @@ Now in the 'Phase Angle Increment Value' section, enter the binary value of the 
 
 Formula : 
           Phase Increment Value  =  [ (2^(phase_width)) x required_frequency ] / system_frequency
+
+
+Click Ok
+
+Then extend the ports of the DDS Compiler
+Then disconnect the 'm_axis_data_tvalid_0' port
+
+<img width="668" height="173" alt="image" src="https://github.com/user-attachments/assets/17d75ad2-0dfc-43de-8ad7-69b70ad8cd1d" />
+Should look like this
